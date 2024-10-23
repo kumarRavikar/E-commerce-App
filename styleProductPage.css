@@ -1,0 +1,108 @@
+/* Set the background color of the body */
+body {
+    background-color: rgb(21, 20, 20);
+    font-family: Arial, sans-serif;
+}
+
+/* Container for the products */
+.container {
+    padding: 10px;
+    background-color: rgb(80, 78, 78);
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Flexbox layout to display products horizontally */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Style for the product cards */
+.card {
+    width: 23%; /* Fixed width for 4 cards per row */
+    margin: 10px;
+    border: none;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Add hover effect to the card */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Image styling */
+.card img {
+    height: 150px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+/* Center align text inside the card */
+.card-body {
+    padding: 15px;
+}
+
+/* Style for the card title */
+.card-title {
+    font-size: 1.2rem;
+    color: rgb(18, 17, 17);
+}
+
+/* Style for the price */
+.card-text {
+    font-size: 1rem;
+    color: rgb(220, 0, 0);
+    font-weight: bold;
+}
+
+/* Style for the "Add to Cart" button */
+.btn-primary {
+    background-color: rgb(0, 123, 255);
+    border-color: rgb(0, 123, 255);
+    border-radius: 30px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.btn-primary:hover {
+    background-color: rgb(0, 100, 210);
+    border-color: rgb(0, 100, 210);
+}
+
+/* Style for the Back button */
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: rgb(220, 53, 69);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Back button hover effect */
+.back-button .remove-button :hover {
+    background-color: rgb(180, 40, 50);
+}
+
+/* Add padding around the page */
+.container {
+    padding: 20px;
+    border-radius: 15px;
+}
+.text-center{
+    color: white;
+}
+.remove-button {
+
+}

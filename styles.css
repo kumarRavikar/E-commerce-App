@@ -1,0 +1,287 @@
+/* General Styles */
+body, h1, h2, h3, p, a {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #f5f5f5;
+}
+
+body {
+    background-color: rgb(34, 34, 34);
+}
+
+/* Header Styles */
+.header {
+    background-color: rgb(40, 44, 52);
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.navbar a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.navbar a:hover {
+    color: rgb(0, 168, 255);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+    background-color: #f4f4f4;
+    color: black;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+    position: relative;
+}
+
+.modal-content input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.modal-content button {
+    padding: 10px 20px;
+    background-color: rgb(41, 128, 185);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.modal-content button:hover {
+    background-color: rgb(30, 90, 130);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #000;
+}
+
+#switchFormText {
+    margin-top: 20px;
+    cursor: pointer;
+    color: #007bff;
+}
+
+/* Welcome Section Styles */
+.welcome {
+    background-color: rgb(44, 62, 80);
+    text-align: center;
+    padding: 30px 20px;
+   
+}
+
+.welcome h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+    opacity: 0; /* Initially hidden */
+    animation: popUp 2s forwards; /* Pop-up effect with a 2s duration */
+}
+
+.welcome p {
+    font-size: 22px;
+    margin-top: 10px;
+    opacity: 0; /* Initially hidden */
+    animation: popUp 2s forwards; /* Pop-up effect with a 2s duration */
+}
+
+/* Category Section Styles */
+.category {
+    background-color: rgb(33, 47, 61);
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.category h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.category-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: rgb(52, 73, 94);
+    padding: 20px; /* Adjusted padding for better image fit */
+    margin: 5px;
+    width: 250px;
+    height: 300px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+}
+
+.card img {
+    max-width: 100%; /* Ensure image fits within card */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    background-color: rgb(41, 128, 185);
+}
+
+/* Featured Products Section */
+.featured {
+    background-color: rgb(20, 90, 50);
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.featured h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.featured-cards {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Testimonials Section */
+.testimonials {
+    background-color: rgb(40, 44, 52);
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.testimonial-cards {
+    display: flex; /* Changed from default block to flex */
+    justify-content: space-around; /* Space out the cards */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.testimonial-cards .card {
+    flex: 1 1 200px; /* Allow cards to grow and shrink */
+    margin: 10px; /* Adjust margin */
+    padding: 20px;
+    background-color: rgb(52, 73, 94);
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
+}
+
+/* Footer Styles */
+.footer {
+    background-color: rgb(40, 44, 52);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+.card1{
+    background-color: rgb(52, 73, 94);
+    padding: 20px; /* Adjusted padding for better image fit */
+    margin: 5px;
+    width: 250px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+}
+
+.card1:hover {
+    transform: translateY(-10px);
+    background-color: rgb(41, 128, 185);
+}
+.offer  {
+    background-color: rgb(234, 91, 9);
+    text-align: center;
+    padding: 20px;
+}
+.offer p{
+    color:#f1eded;
+    font-weight: bold;
+    font-size: 20px;
+    animation: blink 2s infinite;
+}
+
+/* Blinking Animation */
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes slideInDown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes popUp {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes imageDropDown {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Image Animation on Page Load */
+.card img {
+    max-width: 100%;
+    height: auto;
+    animation: imageDropDown 2s ease forwards;
+}

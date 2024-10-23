@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">My Store</div>
+        <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="productpage.html">Shop</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a id="authButton" onclick="openModal()">Sign In</a>
+        </nav>
+    </header>
+
+    <!-- Sign In / Sign Up Modal -->
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="authForm">
+                <h2>Sign In</h2>
+                <div id="signInForm">
+                    <input type="email" id="emailSignIn" placeholder="Email">
+                    <input type="password" id="passwordSignIn" placeholder="Password">
+                    <button onclick="signIn()">Sign In</button>
+                </div>
+
+                <div id="signUpForm" style="display: none;">
+                    <h2>Sign Up</h2>
+                    <input type="text" id="fullName" placeholder="Full Name" required />
+    <input type="email" id="emailSignUp" placeholder="Email" required />
+    <input type="password" id="passwordSignUp" placeholder="Password" required />
+    <input type="password" id="confirmPassword" placeholder="Confirm Password" required />
+                    <button onclick="signUp()">Sign Up</button>
+                </div>
+
+                <p id="switchFormText">Don't have an account? <span onclick="switchToSignUp()">Sign up</span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Welcome Section -->
+    <section class="welcome">
+        <h1>Welcome to Online Store</h1>
+        <p>Discover the best products and deals here!</p>
+    </section>
+    <section class="offer">
+        <p>🎉 Special Offer! Get 20% off on all electronics 🎉</p>
+    </section>
+    <!-- Shop By Category Section -->
+    <section class="category">
+        <h2>Shop By Category</h2>
+        <div class="category-cards">
+            <div class="card">
+                <img src="images.jpg" alt="Electronics">
+                <h3>Electronics</h3>
+            </div>
+            <div class="card">
+                <img src="images2.jpg" alt="Fashion">
+                <h3>Fashion</h3>
+            </div>
+            <div class="card">
+                <img src="images3.jpg" alt="Home Decor">
+                <h3>Home Decor</h3>
+            </div>
+            <div class="card">
+                <img src="images4.jpg" alt="Books">
+                <h3>Books</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="featured">
+        <h2>Featured Products</h2>
+        <div class="featured-cards">
+            <div class="card">
+                <img src="images5.jpg" alt="Bottel">
+                <h3>Product 1</h3>
+                <p>₹100</p>
+            </div>
+            <div class="card">
+                <img src="images6.jpg" alt="mobile">
+                <h3>Product 2</h3>
+                <p>₹15000</p>
+            </div>
+            <div class="card">
+                <img src="images7.jpg" alt="Dress">
+                <h3>Product 3</h3>
+                <p>₹200</p>
+            </div>
+            <div class="card">
+                <img src="images8.jpg" alt="Book">
+                <h3>Product 4</h3>
+                <p>₹250</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Testimonials Section -->
+    <section class="testimonials">
+        <h2>Customer Testimonials</h2>
+        <div class="testimonial-cards">
+            <div class="card1">
+                <p>"Amazing store! Highly recommend."</p>
+            </div>
+            <div class="card1">
+                <p>"Great prices and fast shipping."</p>
+            </div>
+            <div class="card1">
+                <p>"Excellent customer service."</p>
+            </div>
+            <div class="card1">
+                <p>"Love the variety of products available."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Online Store, Kumar Ravikar.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
