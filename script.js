@@ -125,3 +125,30 @@ fetchProducts();
 function goToPreviousPage() {
     window.history.back();
 }
+function filterProducts() {
+    const searchInput = document.getElementById("productSearch").value.toLowerCase();
+    const priceFilter = document.getElementById("priceFilter").value;
+    const productContainer = document.getElementById("productContainer");
+    const products = productContainer.getElementsByClassName("card");
+
+    Array.from(products).forEach(product => {
+        const productName = product.querySelector(".card-title").textContent.toLowerCase();
+        const productPriceText = product.querySelector(".card-text").textContent;
+        const productPrice = parseFloat(productPriceText.replace('$', ''));
+
+        let matchesSearch = productName.includes(searchInput);
+        let matchesPrice = false;
+
+        if (priceFilter === "low") {
+            matchesPrice = productPrice < 50;
+        } else if (priceFilter === "medium") {
+            matchesPrice = productPrice >= 50 && productPrice <= 100;
+        } else if (priceFilter === "high") {
+            matchesPrice = productPrice > 100;
+        } else {
+            matchesPrice = true;
+        }
+
+        product.style.display = matchesSearch && matchesPrice ? "block" : "none";
+    });
+}

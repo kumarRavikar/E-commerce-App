@@ -12,7 +12,19 @@
 
     <div class="container mt-5">
         <h1 class="text-center mb-5">Product Page</h1>
-
+        <div class="filter-section text-center mb-4">
+            <!-- Search Bar -->
+            <input type="text" id="productSearch" placeholder="Search products..." oninput="filterProducts()" class="form-control d-inline w-50">
+        
+            <!-- Price Filter Dropdown -->
+            <select id="priceFilter" onchange="filterProducts()" class="form-control d-inline w-25 ml-2">
+                <option value="">Select Price Range</option>
+                <option value="low">Below $50</option>
+                <option value="medium">$50 - $100</option>
+                <option value="high">Above $100</option>
+            </select>
+        </div>
+        
         <!-- Row to hold the products -->
         <div id="productContainer" class="row">
             <!-- Dynamically generated product cards will be inserted here -->
