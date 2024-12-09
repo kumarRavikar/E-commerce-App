@@ -27,7 +27,7 @@ Installation
 To run this project locally, follow these steps:
 
 Clone the repository:
-git clone https://github.com/yourusername/ecommerce-website.git
+git clone https://github.com/kumarRavikar/ecommerce-website.git
 Navigate to the project directory:
 
 
